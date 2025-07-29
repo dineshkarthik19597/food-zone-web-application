@@ -1,0 +1,52 @@
+const FoodItem = require('../model/FoodModel');
+
+// Search food by name (case-insensitive)
+exports.searchFood = async (req, res) => {
+  const { item_name } = req.query;
+
+  try {
+    const items = await FoodItem.find({
+      item_name: { $regex: new RegExp(item_name, 'i') }
+    });
+
+    if (items.length > 0) {
+      return res.status(200).json({ items });
+    } else {
+      return res.status(404).json({ message: 'No items found' });
+    }
+  } catch (error) {
+    console.error('Error in searchFood:', error);
+    return res.status(500).json({ message: 'Server error' });
+  }
+};
+
+// Get all items by type (e.g., Snacks, MainCourse, etc.)
+exports.getItemsByType = async (req, res) => {
+  const { item_type } = req.query;
+
+  try {
+    const items = await FoodItem.find({
+      item_type: { $regex: new RegExp(item_type, 'i') }
+    });
+
+    return res.status(200).json({ items });
+  } catch (error) {
+    console.error('Error in getItemsByType:', error);
+    return res.status(500).json({ message: 'Server error' });
+  }
+};
+
+// ...existing code...
+
+// Get all food items
+exports.getAllFoodItems = async (req, res) => {
+  try {
+    const items = await FoodItem.find({});
+    return res.status(200).json({ items });
+  } catch (error) {
+    console.error('Error in getAllFoodItems:', error);
+    return res.status(500).json({ message: 'Server error' });
+  }
+};
+
+// ...existing code...

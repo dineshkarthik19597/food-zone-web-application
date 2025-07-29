@@ -1,0 +1,27 @@
+.order-history-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #fefefe;
+}
+
+.order-card {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+  background-color: #f7f7f7;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+.order-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.order-card li {
+  margin: 6px 0;
+}
+
+.error {
+  color: red;
+}

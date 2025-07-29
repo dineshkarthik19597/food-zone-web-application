@@ -1,0 +1,88 @@
+/* Main content container with scroll support */
+.main-container {
+  width: 100%;
+  background-color: #857070;
+  padding: 0 10px 30px;      /* Remove top padding, reduce sides/bottom */
+  box-sizing: border-box;
+  min-height: 100vh;         /* Use 100vh for full viewport height */
+}
+
+/* Card grid */
+.card-overlay {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  padding-bottom: 30px;
+  margin-top: 0;             /* Remove any top margin */
+}
+
+/* Individual card */
+.card {
+  background-color: rgb(45, 38, 38);
+  border-radius: 12px;
+  width: 230px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Card image */
+.card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Heading inside card */
+.card h5 {
+  font-size: 1.1rem;
+  margin: 12px 0;
+  color: #f3ecec;
+}
+
+/* Button */
+.card button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #e5533d;
+}
+
+/* Message if no data */
+.no-data {
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .card {
+    width: 90vw;
+    min-width: 180px;
+    max-width: 320px;
+  }
+  .card-overlay {
+    gap: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+

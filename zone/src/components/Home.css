@@ -1,0 +1,111 @@
+.home-container {
+  padding: 20px;
+  background: #fefefe;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.background-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.brand {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.brand h2 {
+  font-size: 2.5rem;
+  color: #d45d79;
+}
+
+.brand p {
+  font-size: 1rem;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.user-dashboard {
+  text-align: center;
+  background-color: #fff0f5;
+  padding: 15px;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card-scroll-wrapper {
+  overflow-x: auto;
+  padding-bottom: 10px;
+  margin-top: 20px;
+}
+
+.card-overlay {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding: 10px;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 220px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.card p {
+  color: #fff;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #d45d79;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .brand h2 {
+    font-size: 2rem;
+  }
+
+  .card-overlay {
+    gap: 15px;
+  }
+
+  .card {
+    width: 180px;
+  }
+
+  .card-img {
+    height: 120px;
+  }
+
+  .user-dashboard {
+    margin: 15px auto;
+    font-size: 0.95rem;
+  }
+}
+
+
